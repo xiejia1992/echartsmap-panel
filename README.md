@@ -1,3 +1,6 @@
+### 参考：
+http://blog.leanote.com/post/nixon/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91
+
 ### 数据源选择：（数据源与api二选一）
 
 #### 目前只支持prometheus:
