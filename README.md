@@ -160,4 +160,4 @@ http://blog.leanote.com/post/nixon/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91
 ![image-grafana-plugin.png](https://github.com/xiejia1992/echartsmap-panel/blob/master/src/img/grafana-plugin.png)
 
 #### 交流方式
-![image-weixin.png](https://github.com/xiejia1992/echartsmap-panel/blob/master/src/img/weixin.png)
+![image-weixin.jpg](https://github.com/xiejia1992/echartsmap-panel/blob/master/src/img/weixin.jpg)
