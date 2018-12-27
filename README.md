@@ -157,6 +157,6 @@ http://blog.leanote.com/post/nixon/%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91
 
 访问http://140.143.167.11:3000  user:guest  password:guest
 
-![image-20181227135211415](/Users/xiejia/Library/Application Support/typora-user-images/image-20181227135211415.png)
+![image-grafana-plugin.png](https://github.com/xiejia1992/echartsmap-panel/blob/master/src/img/grafana-plugin.png)
 
 
