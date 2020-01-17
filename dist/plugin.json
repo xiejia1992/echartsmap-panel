@@ -1,23 +1,23 @@
 {
     "id": "echartsmap-panel",
     "type": "panel",
-    "name": "Echarts Map",
+    "name": "Echarts",
 
     "info": {
-        "description": "a echarts map to develop a panel",
+        "description": "a echarts to devlop a panel",
         "author": {
             "name": "Xiejia",
             "url": ""
         },
-        "keywords": ["echartsmap", "panel", "grafana plugin"],
+        "keywords": ["echarts", "panel", "grafana plugin"],
         "logos": {
-            "small": "src/img/chinamap_logo_small.png",
-            "large": "src/img/chinamap_logo_large.png"
+            "small": "img/echarts_logo_small.png",
+            "large": "img/echarts_logo_large.png"
         },
         "version": "0.0.1"
     },
     "dependencies": {
-        "grafanaVersion": "5.5",
+        "grafanaVersion": "6.2",
         "plugins": []
     }
 }

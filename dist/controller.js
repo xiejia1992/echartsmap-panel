@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'echarts', './libs/china.js', './libs/world.js', './libs/dark.js'], function (_export, _context) {
+System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './libs/echarts.min', './css/style.css!', './libs/china.js', './libs/world.js', './libs/dark.js'], function (_export, _context) {
     "use strict";
 
     var MetricsPanelCtrl, _, kbn, echarts, _createClass, Controller;
@@ -42,9 +42,9 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'echarts', '
             _ = _lodash.default;
         }, function (_appCoreUtilsKbn) {
             kbn = _appCoreUtilsKbn.default;
-        }, function (_echarts) {
-            echarts = _echarts.default;
-        }, function (_libsChinaJs) {}, function (_libsWorldJs) {}, function (_libsDarkJs) {}],
+        }, function (_libsEchartsMin) {
+            echarts = _libsEchartsMin.default;
+        }, function (_cssStyleCss) {}, function (_libsChinaJs) {}, function (_libsWorldJs) {}, function (_libsDarkJs) {}],
         execute: function () {
             _createClass = function () {
                 function defineProperties(target, props) {
@@ -86,7 +86,6 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'echarts', '
                     };
 
                     _this.maps = ['中国', '世界'];
-
                     _.defaults(_this.panel, optionDefaults);
 
                     //绑定grafana事件
@@ -190,8 +189,8 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'echarts', '
                 }, {
                     key: 'onInitEditMode',
                     value: function onInitEditMode() {
-                        this.addEditorTab('Data', 'public/plugins/chinamap-panel/partials/module-editor.html', 2);
-                        this.addEditorTab('EcahrtsConfig', 'public/plugins/chinamap-panel/partials/echarts-editor.html', 3);
+                        this.addEditorTab('Data', 'public/plugins/echartsmap-panel/partials/module-editor.html', 2);
+                        this.addEditorTab('EcahrtsConfig', 'public/plugins/echartsmap-panel/partials/echarts-editor.html', 3);
                     }
                 }, {
                     key: 'importMap',
@@ -256,7 +255,7 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', 'echarts', '
 
             _export('Controller', Controller);
 
-            Controller.templateUrl = 'module.html';
+            Controller.templateUrl = 'partials/module.html';
         }
     };
 });
