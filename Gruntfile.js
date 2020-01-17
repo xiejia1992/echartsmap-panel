@@ -17,8 +17,20 @@ module.exports = function (grunt) {
       src_to_dist: {
         cwd: 'src',
         expand: true,
-        src: ['**/*', '!**/*.ts', '!**/*.scss', '!img/*'],
+        src: ['**/*', '!**/*.js', '!**/*.ts', '!**/*.scss', '!img/*'],
         dest: 'dist'
+      },
+
+      libs: {
+        cwd: 'libs',
+        expand: true,
+        src: ['**/*'],
+        dest: 'dist/libs/',
+        options: {
+          process: function (content, srcpath) {
+            return content.replace(/(\'|")echarts(\'|")/g, '$1./echarts.min$2');
+          },
+        },
       },
 
       img_to_dist: {
@@ -30,7 +42,7 @@ module.exports = function (grunt) {
 
       pluginDef: {
         expand: true,
-        src: ['plugin.json'],
+        src: ['README.md','plugin.json'],
         dest: 'dist',
       }
     },
@@ -65,6 +77,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean',
     'copy:src_to_dist',
+    'copy:libs',
     'copy:img_to_dist',
     'copy:pluginDef',
     'babel'

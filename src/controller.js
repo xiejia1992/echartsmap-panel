@@ -2,7 +2,7 @@ import { MetricsPanelCtrl } from 'app/plugins/sdk';
 import _ from 'lodash';
 import kbn from 'app/core/utils/kbn';
 
-import echarts from './libs/echarts.min.js';
+import echarts from './libs/echarts.min';
 import './css/style.css!';
 import './libs/china.js';
 import './libs/world.js';

@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './libs/echarts.min.js', './css/style.css!', './libs/china.js', './libs/world.js', './libs/dark.js'], function (_export, _context) {
+System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './libs/echarts.min', './css/style.css!', './libs/china.js', './libs/world.js', './libs/dark.js'], function (_export, _context) {
     "use strict";
 
     var MetricsPanelCtrl, _, kbn, echarts, _createClass, Controller;
@@ -42,8 +42,8 @@ System.register(['app/plugins/sdk', 'lodash', 'app/core/utils/kbn', './libs/echa
             _ = _lodash.default;
         }, function (_appCoreUtilsKbn) {
             kbn = _appCoreUtilsKbn.default;
-        }, function (_libsEchartsMinJs) {
-            echarts = _libsEchartsMinJs.default;
+        }, function (_libsEchartsMin) {
+            echarts = _libsEchartsMin.default;
         }, function (_cssStyleCss) {}, function (_libsChinaJs) {}, function (_libsWorldJs) {}, function (_libsDarkJs) {}],
         execute: function () {
             _createClass = function () {

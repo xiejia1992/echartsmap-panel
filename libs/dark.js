@@ -1,6 +1,3 @@
-/**
- * Created by xiejia on 2018/11/20.
- */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
@@ -57,7 +54,7 @@
     var colorPalette=['#fe8f02','#28292d','#d54429','#2d94d7','#1cafc7','#ea7e53','#eedd78','#73a373','#73b9bc','#7289ab', '#91ca8c','#f49f42'];
     var theme = {
         color: colorPalette,
-
+        
         tooltip: {
             axisPointer: {
                 lineStyle: {
