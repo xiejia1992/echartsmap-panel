@@ -1,17 +1,19 @@
 import { MetricsPanelCtrl } from 'app/plugins/sdk';
 import _ from 'lodash';
 import kbn from 'app/core/utils/kbn';
-import echarts from 'echarts';
+
+import echarts from './libs/echarts.min.js';
+import './css/style.css!';
 import './libs/china.js';
 import './libs/world.js';
 import './libs/dark.js';
 
 export class Controller extends MetricsPanelCtrl {
+
     constructor($scope, $injector) {
         super($scope, $injector);
 
-
-        // 定义默认配置项
+       // 定义默认配置项
         const optionDefaults = {
             EchartsOption: 'console.log(JSON.stringify(echartsData));\n\noption = {};',
             IS_MAP: false,
@@ -23,12 +25,12 @@ export class Controller extends MetricsPanelCtrl {
             request: '',
             updateInterval: 60000
         };
-
-        this.maps = ['中国', '世界'];
-
+		
+		this.maps = ['中国', '世界'];
         _.defaults(this.panel, optionDefaults);
 
-        //绑定grafana事件
+        
+		//绑定grafana事件
         this.events.on('data-received', this.onDataReceived.bind(this));
         this.events.on('data-error', this.onDataError.bind(this));
         this.events.on('data-snapshot-load', this.onDataReceived.bind(this));
@@ -37,6 +39,7 @@ export class Controller extends MetricsPanelCtrl {
 
         this.updateData()
     }
+
 
     // GET请求
     updateData() {
@@ -85,8 +88,9 @@ export class Controller extends MetricsPanelCtrl {
         }
         this.$timeout(() => { this.updateData(); }, that.panel.updateInterval);
     }
+	
 
-    //根据data数据渲染页面函数
+	//根据data数据渲染页面函数
     onDataReceived(dataList) {
         if (!this.panel.USE_URL && !this.panel.USE_FAKE_DATA) {
             function formatDataFromPrometheus(data){
@@ -115,10 +119,12 @@ export class Controller extends MetricsPanelCtrl {
         this.render(this.data);
     }
 
+
     onInitEditMode() {
-        this.addEditorTab('Data', 'public/plugins/chinamap-panel/partials/module-editor.html', 2);
-        this.addEditorTab('EcahrtsConfig', 'public/plugins/chinamap-panel/partials/echarts-editor.html', 3);
+        this.addEditorTab('Data', 'public/plugins/echartsmap-panel/partials/module-editor.html', 2);
+        this.addEditorTab('EcahrtsConfig', 'public/plugins/echartsmap-panel/partials/echarts-editor.html', 3);
     }
+
 
     importMap() {
         if (!this.panel.IS_MAP) return;
@@ -137,6 +143,7 @@ export class Controller extends MetricsPanelCtrl {
     getPanelPath() {
         return `../${grafanaBootData.settings.panels[this.pluginId].baseUrl}/`;
     }
+
 
     link(scope, elem, attrs, ctrl) {
         const $panelContainer = elem.find('.echarts_container')[0];
@@ -174,4 +181,4 @@ export class Controller extends MetricsPanelCtrl {
     }
 }
 
-Controller.templateUrl = 'module.html';
+Controller.templateUrl = 'partials/module.html';
