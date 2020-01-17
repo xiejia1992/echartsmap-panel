@@ -42,7 +42,7 @@ module.exports = function (grunt) {
 
       pluginDef: {
         expand: true,
-        src: ['README.md','plugin.json'],
+        src: ['plugin.json'],
         dest: 'dist',
       }
     },
